@@ -32,6 +32,9 @@ class TodoForm extends React.Component {
           value={this.state.newTask}
         />
         <button>Add</button>
+        <div className="clear-btn" onClick={this.props.clearCompleted}>
+          Clear Completed
+        </div>
       </form>
     );
   }
