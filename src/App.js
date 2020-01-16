@@ -5,22 +5,22 @@ import TodoForm from './components/TodoComponents/TodoForm';
 
 
 const tasks = [
-  {
-    task: "Shopping",
-    id: 123,
-    completed: false
-  },
-  {
-    task: "Eating",
-    id: 124,
-    completed: false
-  }
+  // {
+  //   task: "Shopping",
+  //   id: 123,
+  //   completed: false
+  // },
+  // {
+  //   task: "Eating",
+  //   id: 124,
+  //   completed: false
+  // }
 ];
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
 
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       tasksList: tasks
@@ -74,8 +74,7 @@ class App extends React.Component {
         <h2>Welcome to your Todo App!</h2>
         <TodoList tasks={this.state.tasksList} toggleCompleted={this.toggleCompleted}
         clearCompleted={this.clearCompleted}/>
-        <TodoForm />
-
+        <TodoForm addNewTask={this.addNewTask}/>
       </div>
     );
   }
