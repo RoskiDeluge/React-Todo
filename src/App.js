@@ -1,7 +1,9 @@
 import React from 'react';
-
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
+
+// import css file 
+
 
 
 const tasks = [
@@ -40,11 +42,10 @@ class App extends React.Component {
 
   toggleCompleted = id => {
     // this.togglePurchased
-    console.log("App.js: toggleCompleted: id: ", id);
     // const newState = {...this.state}
     const newState = {
       ...this.state,
-      groceryList: this.state.tasksList.map(item => {
+      tasksList: this.state.tasksList.map(item => {
         if (item.id === id) {
           return {
             ...item,
@@ -60,7 +61,7 @@ class App extends React.Component {
   clearCompleted = () => {
     const newState = {
       ...this.state,
-      groceryList: this.state.tasksList.filter(item => {
+      tasksList: this.state.tasksList.filter(item => {
         return !item.completed; // if(item.completed === false) return true
       })
     };
