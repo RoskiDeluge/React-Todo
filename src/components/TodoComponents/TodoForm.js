@@ -24,7 +24,6 @@ class TodoForm extends React.Component {
     console.log("rendering form");
     return (
       <form onSubmit={this.handleSubmit}>
-        {/* This is an uncontrolled component 😬 We want it to be controlled by state */}
         <input
           onChange={this.handleChanges}
           type="text"
@@ -32,9 +31,9 @@ class TodoForm extends React.Component {
           value={this.state.newTask}
         />
         <button>Add</button>
-        <div className="clear-btn" onClick={this.props.clearCompleted}>
+        <span className="clear-btn" onClick={this.props.clearCompleted}>
           Clear Completed
-        </div>
+        </span>
       </form>
     );
   }
