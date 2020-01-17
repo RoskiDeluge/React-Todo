@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
-h1,
+h1 {
+  font-family: 'Anton', sans-serif;
+  background: -webkit-linear-gradient(rgb(219, 13, 13),rgb(245, 245, 10), rgb(7, 10, 235));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 h2,
 h3,
 h4,
