@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoList from './components/TodoList/TodoList';
-import TodoForm from './components/TodoComponents/TodoForm';
+import TodoForm from './components/TodoComponents/TodoForm/TodoForm';
 
 // import css file 
 
@@ -72,7 +72,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
+        <h2>Spectacular ToDo App</h2>
         <TodoForm addNewTask={this.addNewTask} clearCompleted={this.clearCompleted} />
         <TodoList tasks={this.state.tasksList} toggleCompleted={this.toggleCompleted}
         clearCompleted={this.clearCompleted}/>
